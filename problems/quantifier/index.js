@@ -12,6 +12,7 @@ exports.verify = verify({ modeReset: true }, function (args, t) {
   t.ok(f('123.jpeg'), '123.jpeg')
   t.notOk(f('abc.jpeg'), 'abc.jpeg')
   t.notOk(f('123abc.jpeg'), '123abc.jpeg')
+  t.notOk(f('abc123.jpeg'), 'abc123.jpeg')
   t.notOk(f('123'), '123')
   t.notOk(f('123.jpg2000'), '123.jpg2000')
   t.notOk(f('123.png'), '123.png')
